@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let num=parseInt(prompt("enter a number:"))
+         num, count = 0, reminder=0, Sum = 0;
+
+  
+
+    temp = num;
+
+    while (temp > 0)
+    {
+
+        count++;
+
+        temp = Math.floor(temp/10);
+    }
+
+   temp2 = num;
+
+    while (temp2 > 0)
+    {
+        reminder = temp2 % 10;
+         power = 1;
+
+        for ( i = 1; i <= count; i++)
+        {
+            power *= reminder;
+        }
+        Sum += power;
+
+     
+          temp2 = Math.floor(temp2/10);
+    }
+    if (Sum == num)
+    {
+        alert("armstrong chhe..");
+    }
+    else
+    {
+        alert("armstrong nathi..");
+    }
+
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number to Words</title>
+</head>
+<body>
+    <h2>Number to Words Converter</h2>
+    <p id="result"></p>
+
+    <script>
+        function convertToWords(num) {
+            const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+            const teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", 
+                           "sixteen", "seventeen", "eighteen", "nineteen"];
+            const tens = ["", "", "twenty", "thirty", "forty", "fifty", 
+                          "sixty", "seventy", "eighty", "ninety"];
+
+            if (num === 0) return "zero";
+
+            let word = "";
+
+            if (Math.floor(num / 100) > 0) {
+                word += ones[Math.floor(num / 100)] + " hundred ";
+                num %= 100;
+            }
+
+            if (num >= 10 && num < 20) {
+                word += teens[num - 10];
+            } else {
+                if (Math.floor(num / 10) > 0) {
+                    word += tens[Math.floor(num / 10)] + " ";
+                }
+                if (num % 10 > 0) {
+                    word += ones[num % 10];
+                }
+            }
+
+            return word.trim();
+        }
+
+        let input = prompt("Enter a number between 0 and 999:");
+        let resultBox = document.getElementById("result");
+
+        if (isNaN(input) || input.trim() === "") {
+            resultBox.innerText = "not a number";
+        } else {
+            let number = parseInt(input);
+            if (number < 0 || number > 999) {
+                resultBox.innerText = "out of range";
+            } else {
+                resultBox.innerText = convertToWords(number);
+            }
+        }
+    </script>
+</body>
+</html> -->
