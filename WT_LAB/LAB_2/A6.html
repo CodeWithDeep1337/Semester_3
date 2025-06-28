@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Write an HTML page with JavaScript that takes a number from popup box in the range 0-
+999 and display it in words. If the number is out of range, it should show “out of range” and
+if it is not a number ,it should show “not a number” message in the result box. (A) -->
+
+<body>
+    <script>
+        let num = parseInt(prompt("Enter number : "))
+        word=""
+
+        if(isNaN (num)){
+            document.write(" Not a number ")
+        }
+
+        if(num<0 || num>999)
+        {
+            document.write("out of range")
+        }
+
+        ones = ["zero","one","two","three","four","five","six","seven","eight","nine"]
+        teens  = ["","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"]
+        tens  = ["" ,"","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"]
+    
+        if(num<10){
+            word=ones[num]
+        }
+        else if(num==10){ word="Ten"}
+
+        else if(num<20){
+            word=teens[(num%10)]
+        }
+
+        else if(num<100){
+            word=tens[Math.floor(num/10)]
+            word+=ones[(num%10)]
+        }
+        else if (num===100){ word="hundred" }
+
+        else if(num>100){
+            word=ones[Math.floor(num/100)]
+            word+=" hundred and "
+            temp=Math.floor(num/10)
+            word+= tens[temp%10]
+            word+= ones[num%10]
+        }
+
+        document.write(num+" in word : "+word)
+    </script>
+</body>
+</html>
