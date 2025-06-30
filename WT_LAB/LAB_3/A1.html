@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Largest Index</title>
+</head>
+
+<body>
+
+    <script>
+
+        let n = parseInt(prompt("Enter size of array:"));
+
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            arr[i] = parseInt(prompt("Enter number:"));
+        }
+
+        let large = arr[0];
+        let largeIndex = 0;
+
+        for (let i = 1; i < n; i++) {
+            if (large < arr[i]) {
+                large = arr[i];
+                largeIndex = i;
+            }
+        }
+
+        alert('Index of largest number = ' + largeIndex);
+
+    </script>
+</body>
+
+</html>
