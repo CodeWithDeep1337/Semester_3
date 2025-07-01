@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        pro1={
+            Product_Name:"Mobile",
+            company:"Apple",
+            Name:"16 pro max",
+            price:200000,
+            rating:"4+"
+
+           
+        }
+        pro2={
+             Product_Name:"TV",
+             company:"samsung",
+            Name:"LG-L2050G",
+            price:40000,
+            rating:"4.5+"
+            
+
+        }
+         pro3={
+             Product_Name:"Laptop",
+             company:"dell",
+            Name:"Dell g-3500",
+            price:80000,
+            rating:"4.9+"
+           
+        }
+        arr=[pro1,pro2,pro3];
+
+        document.write("<table border='1' cellspacing='0' align='center'>")
+            document.write("<th>"+'Product_Name'+"</th>")
+            document.write("<th>"+'company'+"</th>")
+            document.write("<th>"+'Name'+"</th>")
+             document.write("<th>"+'price'+"</th>")
+            document.write("<th>"+'rating'+"</th>")
+            for( i=0;i<arr.length;i++){
+                document.write("<tr>")
+                    document.write("<td>"+arr[i].Product_Name+"</td>")
+                    document.write("<td>"+arr[i].company+"</td>")
+                    document.write("<td>"+arr[i].Name+"</td>")
+                    document.write("<td>"+arr[i].price+"</td>")
+                    document.write("<td>"+arr[i].rating+"</td>")
+                document.write("</tr>")
+
+                
+                        
+            }
+            document.write("</table>")
+        
+    </script>
+</body>
+</html>

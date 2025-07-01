@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             let n=parseInt(prompt("enter size of array:"))
+
+       let arr=[n];
+    for ( i = 0; i < n; i++)
+    {
+        arr[i]=parseInt(prompt("enter number:"))
+    }
+
+    arr.push(10);
+    document.write(arr);
+    document.write("<br>");
+   
+    arr.pop(10);
+    document.writeln(arr);
+     document.write("<br>");
+
+    arr.shift(20);
+    document.writeln(arr);
+     document.write("<br>");
+
+    arr.unshift(20);
+    document.writeln(arr);
+     document.write("<br>");
+
+    
+    document.writeln(parseInt(arr.sort()));
+     document.write("<br>");
+
+
+arr.splice(2, 0, "hii", "hello");
+ document.writeln(arr);
+
+
+    </script>
+    
+</body>
+</html>
